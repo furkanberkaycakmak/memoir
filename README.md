@@ -2,8 +2,6 @@
 
 Memoir is an elegant, responsive photo gallery application built with Next.js and Cloudinary. It allows you to showcase your precious memories with a beautiful, modern interface featuring modal views, image carousels, and optimized image loading.
 
-![Memoir Screenshot](public/flower.JPG)
-
 ## Features
 
 - **Responsive Image Gallery**: Automatically adjusts to any screen size with a beautiful masonry layout
@@ -14,7 +12,7 @@ Memoir is an elegant, responsive photo gallery application built with Next.js an
 
 ## Demo
 
-Check out the live demo: [Memoir Demo](https://memoir.vercel.app)
+Check out the live demo: [Memoir Demo](https://memoir-opal.vercel.app/)
 
 ## Getting Started
 
@@ -72,7 +70,13 @@ To add your own images:
 
 ### Changing the Header Image
 
-Replace the `flower.JPG` file in the `public` directory with your own image, or update the image path in `pages/index.tsx`.
+You can change the header background image by:
+
+1. Uploading your image to Cloudinary
+2. Updating the image URL in `pages/index.tsx`:
+   ```tsx
+   className="absolute inset-0 bg-[url('https://res.cloudinary.com/your-cloud-name/image/upload/your-image.jpg')] bg-cover bg-center opacity-30 z-0"
+   ```
 
 ### Modifying the Theme
 
