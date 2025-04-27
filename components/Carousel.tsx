@@ -10,6 +10,7 @@ export default function Carousel({
   currentPhoto,
 }: {
   index: number;
+
   currentPhoto: ImageProps;
 }) {
   const router = useRouter();

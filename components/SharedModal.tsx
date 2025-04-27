@@ -14,7 +14,6 @@ import { variants } from "../utils/animationVariants";
 import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
 import type { ImageProps, SharedModalProps } from "../utils/types";
-import Twitter from "./Icons/Twitter";
 
 export default function SharedModal({
   index,
@@ -72,11 +71,9 @@ export default function SharedModal({
                 className="absolute"
               >
                 <Image
-                  src={`https://res.cloudinary.com/${
-                    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-                  }/image/upload/c_scale,${navigation ? "w_1280" : "w_1920"}/${
-                    currentImage.public_id
-                  }.${currentImage.format}`}
+                  src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+                    }/image/upload/c_scale,${navigation ? "w_1280" : "w_1920"}/${currentImage.public_id
+                    }.${currentImage.format}`}
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
@@ -128,13 +125,12 @@ export default function SharedModal({
                   </a>
                 ) : (
                   <a
-                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Next.js%20Conf!%0A%0Ahttps://nextjsconf-pics.vercel.app/p/${index}`}
+                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Memoir!https://nextjsconf-pics.vercel.app/p/${index}`}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"
                     rel="noreferrer"
                   >
-                    <Twitter className="h-5 w-5" />
                   </a>
                 )}
                 <button
@@ -186,23 +182,20 @@ export default function SharedModal({
                       exit={{ width: "0%" }}
                       onClick={() => changePhotoId(id)}
                       key={id}
-                      className={`${
-                        id === index
+                      className={`${id === index
                           ? "z-20 rounded-md shadow shadow-black/50"
                           : "z-10"
-                      } ${id === 0 ? "rounded-l-md" : ""} ${
-                        id === images.length - 1 ? "rounded-r-md" : ""
-                      } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
+                        } ${id === 0 ? "rounded-l-md" : ""} ${id === images.length - 1 ? "rounded-r-md" : ""
+                        } relative inline-block w-full shrink-0 transform-gpu overflow-hidden focus:outline-none`}
                     >
                       <Image
                         alt="small photos on the bottom"
                         width={180}
                         height={120}
-                        className={`${
-                          id === index
+                        className={`${id === index
                             ? "brightness-110 hover:brightness-110"
                             : "brightness-50 contrast-125 hover:brightness-75"
-                        } h-full transform object-cover transition`}
+                          } h-full transform object-cover transition`}
                         src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_180/${public_id}.${format}`}
                       />
                     </motion.button>
