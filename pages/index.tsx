@@ -93,6 +93,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
       I can't tell you that… You have to figure it out. Stand up and walk. Keep moving forward. You've got two good legs. So get up and use them. You're strong enough to make your own path.{" "}
         <br />
         <br />
+        Made with ❤️💙 by &nbsp;
         <a
           href="https://instagram.com/furkanberkaycakmak"
           target="_blank"
@@ -101,8 +102,6 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         >
           Furkan Berkay ÇAKMAK
         </a>
-        ,{" "}
-        tarafından sevgi ile yapılmıştır.
       </footer>
     </>
   );
