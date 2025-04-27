@@ -1,4 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { Analytics } from '@vercel/analytics/next';
+
 
 class MyDocument extends Document {
   render() {
@@ -25,6 +27,7 @@ class MyDocument extends Document {
         <body className="bg-black antialiased">
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );
