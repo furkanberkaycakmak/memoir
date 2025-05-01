@@ -51,14 +51,14 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div>
             
-            <h1 className="relative z-20 mt-8 mb-60 text-base font-bold uppercase tracking-widest">
+            <h1 className="relative z-0 mt-8 mb-60 text-base font-bold uppercase tracking-widest">
               MEMOIR
             </h1>
-            <p className="relative z-20 max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+            <p className="relative z-0 max-w-[40ch] text-white/75 sm:max-w-[32ch]">
               "Beyond the lens, it was my heartbeat that framed these moments."
             </p>
             <br />
-            <p className="relative z-20 max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+            <p className="relative z-0 max-w-[40ch] text-white/75 sm:max-w-[32ch]">
               Furkan Berkay ÇAKMAK
             </p>
           </div>
